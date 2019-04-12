@@ -12,6 +12,8 @@ export LANG=en_US.UTF-8
 diff "./Podfile.lock" "./Pods/Manifest.lock" > /dev/null
 if [ $? != 0 ] ; then
   echo Pod install
+  #uncomment if you have complex podfile and some conflicts
+  #rm Podfile.lock
   /usr/local/bin/pod install
 fi
 
